@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: uji_ur5
+    relative_path: urdf/ur5e.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur5e_robot.srdf
+  CONFIG:
+    author_name: uji butler
+    author_email: al429700@uji.es
+    generated_timestamp: 1671594430
