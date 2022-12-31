@@ -5,6 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /TF1
+        - /TF1/Frames1
+        - /PointCloud21
       Splitter Ratio: 0.5175438523292542
     Tree Height: 334
   - Class: rviz/Help
@@ -39,7 +42,7 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Acceleration_Scaling_Factor: 0.5000000000000001
+    - Acceleration_Scaling_Factor: 0.5
       Class: moveit_rviz_plugin/MotionPlanning
       Enabled: true
       Move Group Namespace: ""
@@ -88,6 +91,84 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_palm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          gripper_tip_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          onrobot_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -144,7 +225,7 @@ Visualization Manager:
         Goal State Color: 250; 128; 0
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: manipulator
+        Planning Group: uji_ur5
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -189,6 +270,84 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          grip_finger_1_link_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_1_link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_2_link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_finger_middle_link_3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_palm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          grip_tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          gripper_tip_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          onrobot_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -222,7 +381,155 @@ Visualization Manager:
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
-      Velocity_Scaling_Factor: 0.5000000000000001
+      Velocity_Scaling_Factor: 0.5
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        aruco_base:
+          Value: false
+        base:
+          Value: false
+        base_link:
+          Value: true
+        base_link_inertia:
+          Value: false
+        camera_aligned_depth_to_color_frame:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_link:
+          Value: false
+        flange:
+          Value: false
+        forearm_link:
+          Value: false
+        grip_finger_1_link_0:
+          Value: false
+        grip_finger_1_link_1:
+          Value: false
+        grip_finger_1_link_2:
+          Value: false
+        grip_finger_1_link_3:
+          Value: false
+        grip_finger_2_link_0:
+          Value: false
+        grip_finger_2_link_1:
+          Value: false
+        grip_finger_2_link_2:
+          Value: false
+        grip_finger_2_link_3:
+          Value: false
+        grip_finger_middle_link_0:
+          Value: false
+        grip_finger_middle_link_1:
+          Value: false
+        grip_finger_middle_link_2:
+          Value: false
+        grip_finger_middle_link_3:
+          Value: false
+        grip_palm:
+          Value: false
+        grip_tool0:
+          Value: false
+        gripper_tip_link:
+          Value: true
+        onrobot_link:
+          Value: false
+        shoulder_link:
+          Value: false
+        tool0:
+          Value: false
+        tool0_controller:
+          Value: false
+        upper_arm_link:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        base_link:
+          aruco_base:
+            camera_color_optical_frame:
+              {}
+          base:
+            tool0_controller:
+              {}
+          base_link_inertia:
+            shoulder_link:
+              upper_arm_link:
+                forearm_link:
+                  wrist_1_link:
+                    wrist_2_link:
+                      wrist_3_link:
+                        flange:
+                          tool0:
+                            onrobot_link:
+                              grip_palm:
+                                grip_finger_1_link_0:
+                                  grip_finger_1_link_1:
+                                    grip_finger_1_link_2:
+                                      grip_finger_1_link_3:
+                                        {}
+                                grip_finger_2_link_0:
+                                  grip_finger_2_link_1:
+                                    grip_finger_2_link_2:
+                                      grip_finger_2_link_3:
+                                        {}
+                                grip_finger_middle_link_0:
+                                  grip_finger_middle_link_1:
+                                    grip_finger_middle_link_2:
+                                      grip_finger_middle_link_3:
+                                        {}
+                                grip_tool0:
+                                  gripper_tip_link:
+                                    {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /camera/depth/color/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -239,7 +546,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 1.9467580318450928
+      Distance: 2.125424861907959
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -255,9 +562,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.24479734897613525
+      Pitch: 0.03479840233922005
       Target Frame: base_link
-      Yaw: 1.536765456199646
+      Yaw: 5.454895496368408
     Saved: ~
 Window Geometry:
   Displays:
