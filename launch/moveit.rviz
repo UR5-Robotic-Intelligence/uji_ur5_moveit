@@ -395,6 +395,8 @@ Visualization Manager:
           Value: true
         base_link_inertia:
           Value: false
+        bottle1:
+          Value: true
         camera_aligned_depth_to_color_frame:
           Value: false
         camera_color_frame:
@@ -407,6 +409,10 @@ Visualization Manager:
           Value: false
         camera_link:
           Value: false
+        cup1:
+          Value: true
+        cup2:
+          Value: true
         flange:
           Value: false
         forearm_link:
@@ -441,10 +447,16 @@ Visualization Manager:
           Value: false
         gripper_tip_link:
           Value: true
+        initial_tea_grip_pose:
+          Value: true
+        marker_3:
+          Value: true
         onrobot_link:
           Value: false
         shoulder_link:
           Value: false
+        tea packet1:
+          Value: true
         tool0:
           Value: false
         tool0_controller:
@@ -466,7 +478,16 @@ Visualization Manager:
       Tree:
         base_link:
           aruco_base:
+            bottle1:
+              {}
             camera_color_optical_frame:
+              marker_3:
+                {}
+            cup1:
+              {}
+            cup2:
+              {}
+            tea packet1:
               {}
           base:
             tool0_controller:
@@ -500,6 +521,8 @@ Visualization Manager:
                                 grip_tool0:
                                   gripper_tip_link:
                                     {}
+          initial_tea_grip_pose:
+            {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -546,7 +569,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.125424861907959
+      Distance: 2.6670427322387695
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -562,9 +585,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.03479840233922005
+      Pitch: -0.09020157158374786
       Target Frame: base_link
-      Yaw: 5.454895496368408
+      Yaw: 5.819904327392578
     Saved: ~
 Window Geometry:
   Displays:
