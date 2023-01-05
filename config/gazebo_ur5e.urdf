@@ -776,9 +776,9 @@
     <!-- end of joint list -->
     <link name="onrobot_link">
         <inertial>
-            <origin rpy="0 0 0" xyz="0 0 0.04" />
-            <mass value="1" />
-            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+            <origin rpy="0 0 0" xyz="0 0 0.004" />
+            <mass value="0.1" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
         </inertial>
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0" />
@@ -796,6 +796,99 @@
             </geometry>
         </collision>
     </link>
+    <!-- link list -->
+    <link name="safety_wall">
+        <visual>
+            <geometry>
+                <box size="3 0.1 3" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="3 0.1 3" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+    </link>
+    <link name="table">
+        <visual>
+            <geometry>
+                <box size="3 3 0.001" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="3 3 0.001" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+    </link>
+    <link name="robot_base_table">
+        <visual>
+            <geometry>
+                <box size="0.6 0.6 0.02" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="0.6 0.6 0.02" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+    </link>
+    <link name="robot_base_column">
+        <visual>
+            <geometry>
+                <box size="0.15 0.15 0.44" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="0.15 0.15 0.44" />
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+        </inertial>
+    </link>
+    <joint name="robot_base_table_column" type="fixed">
+        <parent link="robot_base_table" />
+        <child link="robot_base_column" />
+        <origin rpy="0 0 0" xyz="0 0 0.22" />
+    </joint>
+    <joint name="robot_base_column_table" type="fixed">
+        <parent link="robot_base_column" />
+        <child link="table" />
+        <origin rpy="0 0 0" xyz="2 -0.15 0.02" />
+    </joint>
+    <joint name="table_safety_wall" type="fixed">
+        <parent link="table" />
+        <child link="safety_wall" />
+        <origin rpy="0 0 0" xyz="-2 0.55 0.2" />
+    </joint>
+    <joint name="safety_wall_base_link" type="fixed">
+        <parent link="safety_wall" />
+        <child link="base_link" />
+        <origin rpy="0 0 0" xyz="0.0 -0.4 0.0" />
+    </joint>
     <!-- <link name="grip_tool0"/>
 
     <joint name="grip_palm_tool0" type="fixed">
@@ -814,10 +907,17 @@
 			<child link="grip_palm"/>
 			<origin xyz="0 0 0.18835" rpy="0 0 0"/>
 		</joint> -->
+    <!-- <joint name="gripper_joint" type="revolute">
+			<parent link="onrobot_link"/>
+			<child link="grip_palm"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+			<origin xyz="0 0 0.07835" rpy="1.57 0 0"/>
+		</joint> -->
     <joint name="gripper_joint" type="fixed">
         <parent link="onrobot_link" />
         <child link="grip_palm" />
-        <origin rpy="1.57 0 0" xyz="0 0 0.07835" />
+        <origin rpy="1.57 0 2.355" xyz="0 0 0.07835" />
     </joint>
     <link name="gripper_tip_link" />
     <joint name="gripper_tip_joint" type="fixed">
@@ -825,7 +925,6 @@
         <child link="gripper_tip_link" />
         <origin rpy="0 0 0" xyz="0.075 0 0" />
     </joint>
-    4
     <!-- <joint name="gripper_joint" type="prismatic">
 			<parent link="onrobot_link"/>
 			<child link="grip_palm"/>

@@ -173,7 +173,17 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          safety_wall:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          table:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -348,7 +358,17 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          safety_wall:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          table:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -395,8 +415,6 @@ Visualization Manager:
           Value: true
         base_link_inertia:
           Value: false
-        bottle1:
-          Value: true
         camera_aligned_depth_to_color_frame:
           Value: false
         camera_color_frame:
@@ -409,9 +427,7 @@ Visualization Manager:
           Value: false
         camera_link:
           Value: false
-        cup1:
-          Value: true
-        cup2:
+        cup:
           Value: true
         flange:
           Value: false
@@ -447,15 +463,19 @@ Visualization Manager:
           Value: false
         gripper_tip_link:
           Value: true
-        initial_tea_grip_pose:
+        initial_oriented_grip_pose:
           Value: true
-        marker_3:
+        initial_shifted_grip_pose:
           Value: true
+        kobuki:
+          Value: false
         onrobot_link:
           Value: false
+        safety_wall:
+          Value: true
         shoulder_link:
           Value: false
-        tea packet1:
+        table:
           Value: true
         tool0:
           Value: false
@@ -476,53 +496,51 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_link:
-          aruco_base:
-            bottle1:
-              {}
-            camera_color_optical_frame:
-              marker_3:
-                {}
-            cup1:
-              {}
-            cup2:
-              {}
-            tea packet1:
-              {}
-          base:
-            tool0_controller:
-              {}
-          base_link_inertia:
-            shoulder_link:
-              upper_arm_link:
-                forearm_link:
-                  wrist_1_link:
-                    wrist_2_link:
-                      wrist_3_link:
-                        flange:
-                          tool0:
-                            onrobot_link:
-                              grip_palm:
-                                grip_finger_1_link_0:
-                                  grip_finger_1_link_1:
-                                    grip_finger_1_link_2:
-                                      grip_finger_1_link_3:
+        table:
+          safety_wall:
+            base_link:
+              aruco_base:
+                camera_color_optical_frame:
+                  {}
+                cup:
+                  {}
+                kobuki:
+                  {}
+              base:
+                tool0_controller:
+                  {}
+              base_link_inertia:
+                shoulder_link:
+                  upper_arm_link:
+                    forearm_link:
+                      wrist_1_link:
+                        wrist_2_link:
+                          wrist_3_link:
+                            flange:
+                              tool0:
+                                onrobot_link:
+                                  grip_palm:
+                                    grip_finger_1_link_0:
+                                      grip_finger_1_link_1:
+                                        grip_finger_1_link_2:
+                                          grip_finger_1_link_3:
+                                            {}
+                                    grip_finger_2_link_0:
+                                      grip_finger_2_link_1:
+                                        grip_finger_2_link_2:
+                                          grip_finger_2_link_3:
+                                            {}
+                                    grip_finger_middle_link_0:
+                                      grip_finger_middle_link_1:
+                                        grip_finger_middle_link_2:
+                                          grip_finger_middle_link_3:
+                                            {}
+                                    grip_tool0:
+                                      gripper_tip_link:
                                         {}
-                                grip_finger_2_link_0:
-                                  grip_finger_2_link_1:
-                                    grip_finger_2_link_2:
-                                      grip_finger_2_link_3:
-                                        {}
-                                grip_finger_middle_link_0:
-                                  grip_finger_middle_link_1:
-                                    grip_finger_middle_link_2:
-                                      grip_finger_middle_link_3:
-                                        {}
-                                grip_tool0:
-                                  gripper_tip_link:
-                                    {}
-          initial_tea_grip_pose:
-            {}
+              initial_shifted_grip_pose:
+                initial_oriented_grip_pose:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -569,7 +587,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.6670427322387695
+      Distance: 2.178677558898926
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -577,17 +595,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.18756115436553955
-        Y: 0.29503750801086426
-        Z: -4.91737750962784e-07
+        X: -0.5732369422912598
+        Y: -0.5712465643882751
+        Z: -4.768365897689364e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.09020157158374786
+      Pitch: 0.8997970223426819
       Target Frame: base_link
-      Yaw: 5.819904327392578
+      Yaw: 4.189920902252197
     Saved: ~
 Window Geometry:
   Displays:

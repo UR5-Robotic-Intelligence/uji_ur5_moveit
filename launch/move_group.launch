@@ -43,6 +43,8 @@
     <arg name="load_robot_description" value="$(arg load_robot_description)" />
   </include>
 
+  <include file="$(find robot_helpers)/launch/generate_state_database.launch"/>
+
   <!-- Planning Pipelines -->
   <group ns="move_group/planning_pipelines">
 
