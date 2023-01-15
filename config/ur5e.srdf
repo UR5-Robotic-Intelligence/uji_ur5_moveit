@@ -37,6 +37,14 @@
         <joint name="wrist_2_joint" value="-1.07348"/>
         <joint name="wrist_3_joint" value="1.07078"/>
     </group_state>
+    <group_state name="pre_serving" group="uji_ur5">
+        <joint name="elbow_joint" value="-1.5632814168930054"/>
+        <joint name="shoulder_lift_joint" value="-1.9849010906615199"/>
+        <joint name="shoulder_pan_joint" value="-4.673485819493429"/>
+        <joint name="wrist_1_joint" value="3.5751911836811523"/>
+        <joint name="wrist_2_joint" value="-1.5558651129352015"/>
+        <joint name="wrist_3_joint" value="0.7565791010856628"/>
+    </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="world_joint" type="fixed" parent_frame="world" child_link="robot_base_table"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
